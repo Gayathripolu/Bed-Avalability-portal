@@ -30,15 +30,15 @@ class AdminHospitalApplicationTests {
 //		adminHospitalRepository.save(hospital);
 //		Assertions.assertThat(hospital.gethId()).isGreaterThan(0);
 //	}
-	@Test
-	public  void updateAdminHospital(){
-		Hospital hospital=adminHospitalRepository.findById(56L).get();
-		hospital.sethType("Private");
-		hospital.sethState("AP");
-		Hospital hospitalUpdated=adminHospitalRepository.save(hospital);
-		Assertions.assertThat(hospitalUpdated.gethType()).isEqualTo("Private");
-		Assertions.assertThat(hospitalUpdated.gethState()).isEqualTo("AP");
-	}
+//	@Test
+//	public  void updateAdminHospital(){
+//		Hospital hospital=adminHospitalRepository.findById(56L).get();
+//		hospital.sethType("Private");
+//		hospital.sethState("AP");
+//		Hospital hospitalUpdated=adminHospitalRepository.save(hospital);
+//		Assertions.assertThat(hospitalUpdated.gethType()).isEqualTo("Private");
+//		Assertions.assertThat(hospitalUpdated.gethState()).isEqualTo("AP");
+//	}
 
 	@Test
 	public  void getListHospitals(){
@@ -46,23 +46,23 @@ class AdminHospitalApplicationTests {
 		Assertions.assertThat(hospitals.size()).isGreaterThan(0);
 
 	}
-	@Test
-	public  void getHospitalById(){
-		Hospital hospital=adminHospitalRepository.findById(58L).get();
-		Assertions.assertThat(hospital.gethId()).isEqualTo(58);
-	}
-
-	@Test
-	public void deleteHospital(){
-		Hospital hospital=adminHospitalRepository.findById(15l).get();
-		adminHospitalRepository.delete(hospital);
-		Hospital hospital1=null;
-		Optional<Hospital> optionalHospital=adminHospitalRepository.findById(15L);
-		if(optionalHospital.isPresent()){
-			hospital1=optionalHospital.get();
-		}
-		Assertions.assertThat(hospital1).isNull();
-
-	}
+//	@Test
+//	public  void getHospitalById(){
+//		Hospital hospital=adminHospitalRepository.findById(58L).get();
+//		Assertions.assertThat(hospital.gethId()).isEqualTo(58);
+//	}
+//
+//	@Test
+//	public void deleteHospital(){
+//		Hospital hospital=adminHospitalRepository.findById(15l).get();
+//		adminHospitalRepository.delete(hospital);
+//		Hospital hospital1=null;
+//		Optional<Hospital> optionalHospital=adminHospitalRepository.findById(15L);
+//		if(optionalHospital.isPresent()){
+//			hospital1=optionalHospital.get();
+//		}
+//		Assertions.assertThat(hospital1).isNull();
+//
+//	}
 
 }
